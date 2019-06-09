@@ -1,0 +1,85 @@
+@import "../base/variables";
+
+.form {
+    display:flex;
+    flex-direction: row;
+
+    height:auto;
+    padding:5rem 10rem;
+
+    &_inputs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &_input{
+            background-color: $header-main-color;
+            border: none;
+            color: $font-color-2;
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom:$marginbottom-small;
+            padding: 2rem 4rem;
+            text-align: center;
+            width: 35rem;
+            transition: .6s ease;
+            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        &_input::placeholder {
+            color: rgba(94, 96, 95, 0.7);
+            font-weight: 400;
+        }
+        &_input:hover::placeholder {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+
+        &_input:hover {
+            background-color: #17baaa;
+        }
+
+    }
+
+    &_wrapper-user {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+        .btn {
+            position: relative;
+            margin:3rem;
+            width:15rem;
+            height: 15rem;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            font-weight: 600;
+            background-color: $font-color-1;
+            color: $font-color-2;
+
+            -webkit-box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
+            -moz-box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
+            box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
+
+
+            &_submit {
+
+
+
+            }
+
+            &_reset {
+
+            }
+        }
+
+        .output {
+            width:30rem;
+            height: 10rem;
+            background-color: $header-second-color;
+        }
+    }
+}

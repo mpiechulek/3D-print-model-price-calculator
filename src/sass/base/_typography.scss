@@ -1,0 +1,29 @@
+@import "variables";
+
+body {
+    font-family: 'Changa', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color:#eeeeee;;
+    line-height: 1.5;
+    word-spacing: .5rem;
+    letter-spacing: .5rem;
+}
+
+.header_1 {
+    font-family: 'Monoton', cursive;
+    font-size: $header-h1-font-size;
+    word-spacing: 2rem;
+}
+
+.header_2  {
+    font-size:$header-h2-font-size;
+}
+
+.header_3  {
+    font-size:$header-h3-font-size;
+}
+
+.paragraph {
+    font-size:$paragraph-font-size;
+}

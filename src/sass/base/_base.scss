@@ -1,0 +1,55 @@
+@import "mixins";
+
+body {
+    background-color: white;
+    box-sizing: border-box;
+    position: relative;
+    min-width: 350px;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //  this defines what 1rem is (10px) 62.5% form 16px (for that the user can change the fons size on the web page)
+    font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    min-width: 240px;
+
+    @include respond(big-desktop) {
+        // width < 1800px ? 1rem = 12px, 11/16 = 75%%
+        font-size: 75%;
+    }
+
+    @include respond(medium-desktop) {
+        // width < 1800px ? 1rem = 10px, 9/16 = 62.5%%
+        font-size: 62.5%;
+    }
+
+    @include respond(tab-land) {
+        // width < 1200px ? 1rem = 9px, 9/16 = 56.25%
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        // width < 900px ? 1rem = 8px, 8/16 = 50%
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        // width < 600px ? 1rem = 7px, 7/16 = 43.75%
+        font-size: 43.75%;
+    }
+
+    @include respond(small-phone) {
+        // width < 450px ? 1rem = 7px, 7/16 = 43.75%
+        font-size: 43.75%;
+    }
+
+}

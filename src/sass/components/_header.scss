@@ -1,0 +1,31 @@
+.header-main {
+    position: relative;
+    width:100%;
+    height: auto;
+    background-color: $header-second-color;
+
+    &_img {
+        position:absolute;
+        right:3rem;
+        top: 1rem;
+        width:15rem;
+        height:15rem;
+        z-index: 9999;
+    }
+
+    &_content {
+        height: auto;
+        width: 70vw;
+        position: relative;
+        background-color: $header-main-color;
+        display:block;
+        -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+
+        &_header-1 {
+            display: inline-block;
+            margin-left: 20rem;
+        }
+
+    }
+}
