@@ -1,11 +1,13 @@
 @import "../base/variables";
 
 .form {
-    display:flex;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: height;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
 
-    height:auto;
-    padding:5rem 10rem;
 
     &_inputs{
         display: flex;
@@ -13,19 +15,21 @@
         justify-content: center;
 
         &_input{
+            border-radius: 3px;
             background-color: $header-main-color;
             border: none;
             color: $font-color-2;
             font-weight: 600;
-            font-size: 2rem;
+            font-family: 'Changa', sans-serif;
+            font-size: 1.6rem;
             margin-bottom:$marginbottom-small;
-            padding: 2rem 4rem;
+            padding: 1.3rem 3rem;
             text-align: center;
             width: 35rem;
             transition: .6s ease;
-            -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.55);
+            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.55);
+            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.55);
         }
 
         &_input::placeholder {
@@ -47,39 +51,75 @@
         display:flex;
         flex-direction: column;
         justify-content: center;
+        margin-left: 10rem;
+        align-content: center;
 
+        &_buttons {
+            margin-bottom: $marginbottom-medium;
+            display:flex;
+            justify-content: center;
 
-        .btn {
-            position: relative;
-            margin:3rem;
-            width:15rem;
-            height: 15rem;
-            border-radius: 50%;
-            font-size: 2.5rem;
-            font-weight: 600;
-            background-color: $font-color-1;
-            color: $font-color-2;
+            .btn {
+                font-family: 'Changa', sans-serif;
+                position: relative;
+                margin:3rem;
+                width:15rem;
+                height: 15rem;
+                border-radius: 50%;
+                font-size: 2rem;
+                padding:0.6rem;
+                text-align: center;
+                font-weight: 600;
+                color: $font-color-2;
+                box-shadow: 4px 5px 5px rgba(0,0,0,0.4);
+                border: 2px solid silver;
+                /*Ridiculous Gradient Syntax*/
+                background: #6b48ff;
+                background: linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
+                background: moz-linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
 
-            -webkit-box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
-            -moz-box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
-            box-shadow: 6px 11px 0px 0px rgba(0,0,0,0.53);
+                transition: all .6s ease;
 
+                &_submit:hover {
+                    background-color: green;
+                    background: linear-gradient(to bottom right,  #00b31d 0%, #00600f 100%);
+                    background: moz-linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
+                    transition: all .6s ease;
+                }
 
-            &_submit {
+                &_reset:hover {
+                    background-color: red;
+                    background: linear-gradient(to bottom right,  #ff0000 0%, #750000 100%);
+                    background: moz-linear-gradient(to bottom right, #ff0000 0%, #750000 100%);
+                }
 
+                &_reset:active, &_submit:active {
+                    transform: translateY(3px);
+                    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
 
-
-            }
-
-            &_reset {
-
+                }
             }
         }
 
         .output {
-            width:30rem;
-            height: 10rem;
-            background-color: $header-second-color;
+            position: relative;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            width: 30rem;
+            height:auto;
+            border-radius: 3px;
+            padding: 3rem 3rem;
+            font-size: 3em;
+            background-color: #fdbf00;
+        }
+
+        .warning {
+            color:red;
+            padding:2rem;
+            text-align:center;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
