@@ -8,13 +8,17 @@
     margin-top: 5rem;
     margin-bottom: 4rem;
 
+    @include respond(phone) {
+        flex-direction: column;
+    }
 
-    &_inputs{
+    &_inputs {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
-        &_input{
+        &_input {
             border-radius: 3px;
             background-color: $header-main-color;
             border: none;
@@ -22,81 +26,91 @@
             font-weight: 600;
             font-family: 'Changa', sans-serif;
             font-size: 1.6rem;
-            margin-bottom:$marginbottom-small;
+            margin-bottom: $marginbottom-small;
             padding: 1.3rem 3rem;
             text-align: center;
             width: 35rem;
-            transition: .6s ease;
-            -webkit-box-shadow: 5px 10px 5px 0px rgba(0,0,0,0.55);
-            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.55);
-            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.55);
+            transition: 0.6s ease;
+            -webkit-box-shadow: 5px 10px 5px 0 rgba(0,0,0,0.55);
+            -moz-box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.55);
+            box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.55);
+
+            @include respond(tab-port) {
+                width: 25rem;
+            }
         }
 
         &_input::placeholder {
             color: rgba(94, 96, 95, 0.7);
             font-weight: 400;
         }
+
         &_input:hover::placeholder {
             color: rgba(255, 255, 255, 0.8);
         }
 
-
         &_input:hover {
             background-color: #17baaa;
         }
-
     }
 
     &_wrapper-user {
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 10rem;
         align-content: center;
 
+        @include respond(tab-port) {
+            margin-left: 2rem;
+        }
+
+        @include respond(phone) {
+            margin-left: 0;
+        }
+
         &_buttons {
             margin-bottom: $marginbottom-medium;
-            display:flex;
+            display: flex;
             justify-content: center;
 
             .btn {
                 font-family: 'Changa', sans-serif;
                 position: relative;
-                margin:3rem;
-                width:15rem;
+                margin: 3rem;
+                width: 15rem;
                 height: 15rem;
                 border-radius: 50%;
                 font-size: 2rem;
-                padding:0.6rem;
+                padding: 0.6rem;
                 text-align: center;
                 font-weight: 600;
                 color: $font-color-2;
-                box-shadow: 4px 5px 5px rgba(0,0,0,0.4);
+                box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
                 border: 2px solid silver;
                 /*Ridiculous Gradient Syntax*/
                 background: #6b48ff;
-                background: linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
-                background: moz-linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
-
-                transition: all .6s ease;
+                background: linear-gradient(to bottom right, #6b48ff 0%, #1c0969 100%);
+                background: moz-linear-gradient(to bottom right, #6b48ff 0%, #1c0969 100%);
+                transition: all 0.6s ease;
 
                 &_submit:hover {
                     background-color: green;
-                    background: linear-gradient(to bottom right,  #00b31d 0%, #00600f 100%);
-                    background: moz-linear-gradient(to bottom right,  #6b48ff 0%, #1c0969 100%);
-                    transition: all .6s ease;
+                    background: linear-gradient(to bottom right, #00b31d 0%, #00600f 100%);
+                    background: moz-linear-gradient(to bottom right, #6b48ff 0%, #1c0969 100%);
+                    transition: all 0.6s ease;
                 }
 
                 &_reset:hover {
                     background-color: red;
-                    background: linear-gradient(to bottom right,  #ff0000 0%, #750000 100%);
+                    background: linear-gradient(to bottom right, #ff0000 0%, #750000 100%);
                     background: moz-linear-gradient(to bottom right, #ff0000 0%, #750000 100%);
                 }
 
-                &_reset:active, &_submit:active {
+                &_reset:active,
+                &_submit:active {
                     transform: translateY(3px);
                     box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
-
                 }
             }
         }
@@ -107,17 +121,17 @@
             margin-left: auto;
             margin-right: auto;
             width: 30rem;
-            height:auto;
+            height: 13.2rem;
             border-radius: 3px;
-            padding: 3rem 3rem;
+            padding: 3rem;
             font-size: 3em;
             background-color: #fdbf00;
         }
 
         .warning {
-            color:red;
-            padding:2rem;
-            text-align:center;
+            color: red;
+            padding: 2rem;
+            text-align: center;
             margin-left: auto;
             margin-right: auto;
         }

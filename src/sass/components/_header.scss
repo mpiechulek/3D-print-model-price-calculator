@@ -14,7 +14,7 @@
 
         @include respond(tab-land) {
             right:5rem;
-            top: 2.5rem;
+            top: 4.5rem;
             width:10rem;
             height:10rem;
         }
@@ -49,7 +49,7 @@
         @include respond(tab-port) {
             -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-            width: 65vw;
+            width: 75vw;
             height: 15vh;
         }
 
@@ -61,17 +61,17 @@
         }
 
         &_header-1 {
-            margin-left: 10rem;
-            display: block;
+            @include absCenetr();
+            width:80%;
 
             @include respond(tab-land) {
-                margin-left: 5rem;
-                font-size:5rem;
+
+                font-size:4.5rem;
             }
 
             @include respond(tab-port) {
-                margin-left: 2rem;
-                font-size: 4rem;
+
+                font-size: 3.5rem;
             }
 
             span {
