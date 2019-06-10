@@ -1,10 +1,20 @@
 //jshint esversion:6
-import { fillprice } from './app/app1.js';
-// import { fillPrice } from './app/app2.js';
+import { totalPrintCost } from './app/function.js';
 
 
+export const action = () => {
 
+    document.querySelector('.btn_reset').addEventListener('click', function() {
+        document.getElementById('result').innerHTML = '000';
+        document.querySelector('.warning_par').innerHTML = '';
+    });
 
-export const coLubie = () => {
-    console.log(`FillPrice: ${fillPrice}`);
+    document.querySelector('.btn_submit').addEventListener('click', function() {
+
+        if (isNaN(totalPrintCost)) {
+            document.querySelector('.warning_par').innerHTML = 'Please fill all fields with only numeric characters';
+        } else {
+            document.getElementById('result').innerHTML = totalPrintCost;
+        }
+    });
 };

@@ -5,7 +5,7 @@ body {
     background-color: $bg-color;
     box-sizing: border-box;
     position: relative;
-    min-width: 350px;
+    min-width: 260px;
 
 	background:
 		linear-gradient(90deg, $bg-color ($bg-dot-space - $bg-dot-size), transparent 1%) center,

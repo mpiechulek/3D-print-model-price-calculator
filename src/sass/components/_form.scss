@@ -18,6 +18,11 @@
         justify-content: center;
         align-items: center;
 
+        &_label{
+            font-size: 1.3rem;
+            color:$header-second-color;
+        }
+
         &_input {
             border-radius: 3px;
             background-color: $header-main-color;
@@ -107,6 +112,14 @@
                     background: moz-linear-gradient(to bottom right, #ff0000 0%, #750000 100%);
                 }
 
+                @include  respond(tab-land){
+                    &:hover {
+                        background: #6b48ff;
+                        background: linear-gradient(to bottom right, #6b48ff 0%, #1c0969 100%);
+                        background: moz-linear-gradient(to bottom right, #6b48ff 0%, #1c0969 100%);
+                    }
+                }
+
                 &_reset:active,
                 &_submit:active {
                     transform: translateY(3px);
@@ -129,11 +142,20 @@
         }
 
         .warning {
+            width: 100%;
+            min-height: 20%;
+            position: relative;
+            font-weight: 600;
             color: red;
-            padding: 2rem;
             text-align: center;
+            margin-top: 2rem;
             margin-left: auto;
             margin-right: auto;
+
+            &_par {
+                @include absCenetr();
+                width: 100%;
+            }
         }
     }
 }

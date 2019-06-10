@@ -7,26 +7,33 @@
     &_img {
         position:absolute;
         right:10rem;
-        top:1.5rem;
+        top:15%;
         width:15rem;
         height:15rem;
         z-index: 10;
 
-        @include respond(tab-land) {
-            right:5rem;
-            top: 4.5rem;
+        @include respond(big-desktop){
+            top: 8%;
+        }
+
+        @include respond(medium-desktop){
+            top: 15%;
+            right:8rem;
+        }
+
+        @include respond(tab-land) {            
+            top: 25%;
             width:10rem;
             height:10rem;
         }
 
         @include respond(tab-port) {
-            right:10rem;
             top: 3rem;
         }
 
         @include respond(phone) {
             right:2rem;
-            top: 8rem;
+            top: 32%;
             width:7rem;
             height:7rem;
         }
@@ -41,6 +48,9 @@
         -webkit-clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
         z-index: 10;
+        @include respond(medium-desktop) {
+            width: 82vw;
+        }
 
         @include respond(tab-land) {
             height: 20vh;
@@ -55,8 +65,8 @@
 
         @include respond(phone) {
             -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-            width: 90vw;
+            clip-path: none;
+            width: 100vw;
             height: 15vh;
         }
 
@@ -64,14 +74,17 @@
             @include absCenetr();
             width:80%;
 
-            @include respond(tab-land) {
-
-                font-size:4.5rem;
+            @include respond(medium-desktop) {
+                font-size: 4.2rem;
             }
 
             @include respond(tab-port) {
-
                 font-size: 3.5rem;
+            }
+
+            @include respond(phone) {
+                font-size: 3rem;
+                text-align: center;
             }
 
             span {
