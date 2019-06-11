@@ -153,6 +153,10 @@
             margin-left: auto;
             margin-right: auto;
 
+            @include  respond(phone){
+                margin: 3rem 0;
+            }
+
             &_par {
                 @include absCenetr();
                 width: 100%;
