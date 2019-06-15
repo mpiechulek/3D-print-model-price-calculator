@@ -30,7 +30,7 @@
             color: $font-color-2;
             font-weight: 600;
             font-family: 'Changa', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             margin-bottom: $marginbottom-small;
             padding: 1.3rem 3rem;
             text-align: center;
@@ -41,7 +41,7 @@
             box-shadow: 5px 5px 5px 0 rgba(0,0,0,0.55);
 
             @include respond(tab-port) {
-                width: 25rem;
+                width: 28rem;
             }
         }
 
