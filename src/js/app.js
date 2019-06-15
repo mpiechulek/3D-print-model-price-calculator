@@ -27,6 +27,8 @@ export const action = (() => {
 
     const calculate = () => {
 
+        getData();
+
         let weightRatio = _3DWeight / fillWeight;
         let totalFillPrice = rollPrice * weightRatio;
 
@@ -45,13 +47,7 @@ export const action = (() => {
         return totalPrintCost;
     };
 
-    // ========================================================================
-
-    // Submit calculation
-    document.querySelector('.btn_submit').addEventListener('click', () => {
-
-        getData();
-
+    let submit = () => {
         let el = document.getElementsByClassName('form_inputs_input');
 
         for (let i = 0; i < el.length; i++) {
@@ -69,6 +65,19 @@ export const action = (() => {
         } else {
             warning();
         }
+    };
+
+    // ========================================================================
+
+    // Submit calculation
+    document.addEventListener('keypress', (event) => {
+        if (event.keyCode === 13) {
+            submit();
+        }
+    });
+
+    document.querySelector('.btn_submit').addEventListener('click', () => {
+        submit();
     });
 
     // Reset form
