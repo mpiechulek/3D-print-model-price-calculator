@@ -164,3 +164,7 @@
         }
     }
 }
+
+:required:focus {
+  box-shadow: 0  0 5px $background-color-2;
+}
