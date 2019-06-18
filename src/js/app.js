@@ -19,13 +19,13 @@ export const action = (() => {
 
     const getData = () => {
 
-        rollPrice = document.getElementById('fill-roll-price').value.replace(",", ".");
-        fillWeight = document.getElementById('fill-weight').value.replace(",", ".");
-        _3DWeight = document.getElementById('print-weight').value.replace(",", ".");
-        powerCons = document.getElementById('pow-consum').value.replace(",", ".");
-        priceKWh = document.getElementById('price-kwh').value.replace(",", ".");
-        time_h = document.getElementById('time-h').value.replace(",", ".");
-        time_m = document.getElementById('time-m').value.replace(",", ".");
+        rollPrice = Math.abs(document.getElementById('fill-roll-price').value.replace(",", "."));
+        fillWeight =  Math.abs(document.getElementById('fill-weight').value.replace(",", "."));
+        _3DWeight =  Math.abs(document.getElementById('print-weight').value.replace(",", "."));
+        powerCons =  Math.abs(document.getElementById('pow-consum').value.replace(",", "."));
+        priceKWh =  Math.abs(document.getElementById('price-kwh').value.replace(",", "."));
+        time_h =  Math.abs(document.getElementById('time-h').value.replace(",", "."));
+        time_m =  Math.abs(document.getElementById('time-m').value.replace(",", "."));
     };
 
     const calculate = () => {
@@ -57,7 +57,7 @@ export const action = (() => {
                 return totalPrintCost;
             } else {
                 warning();
-                console.log(`totalPrintCost= ${totalPrintCost}`);
+                console.log(`totalPrintCost = ${totalPrintCost}`);
             }
         }
     };
