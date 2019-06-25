@@ -43,6 +43,10 @@
             @include respond(tab-port) {
                 width: 28rem;
             }
+
+            @include respond(phone) {
+                margin-top: 2rem;
+            }
         }
 
         &_input::placeholder {
@@ -78,6 +82,7 @@
             margin-bottom: $marginbottom-medium;
             display: flex;
             justify-content: center;
+            margin-top: 4rem;
 
             .btn {
                 font-family: 'Changa', sans-serif;
@@ -135,7 +140,7 @@
             margin-right: auto;
             overflow: hidden;
             width: 30rem;
-            height: 13.2rem;
+            min-height: 13.2rem;
             border-radius: 3px;
             padding: 3rem;
             font-size: 3em;

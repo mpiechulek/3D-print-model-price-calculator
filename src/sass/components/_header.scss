@@ -21,8 +21,9 @@
             right:8rem;
         }
 
-        @include respond(tab-land) {            
+        @include respond(tab-land) {
             top: 25%;
+            right:7rem;
             width:10rem;
             height:10rem;
         }
@@ -53,13 +54,13 @@
         }
 
         @include respond(tab-land) {
-            height: 20vh;
+            height: 21rem;
         }
 
         @include respond(tab-port) {
             -webkit-clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0%, 80% 100%, 0% 100%);
-            width: 75vw;
+            width: 80vw;
             height: 15vh;
         }
 
