@@ -18,7 +18,7 @@
 
         @include respond(medium-desktop){
             top: 15%;
-            right:8rem;
+            right:5rem;
         }
 
         @include respond(tab-land) {
@@ -50,7 +50,9 @@
         clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
         z-index: 10;
         @include respond(medium-desktop) {
-            width: 82vw;
+            width: 85vw;
+            -webkit-clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
         }
 
         @include respond(tab-land) {
